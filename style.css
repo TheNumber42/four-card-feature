@@ -1,0 +1,131 @@
+:root {
+    /* Primary Colors */
+--colorRed: hsl(0, 78%, 62%);
+--colorCyan: hsl(180, 62%, 55%);
+--colorOrange: hsl(34, 97%, 64%);
+--colorBlue: hsl(212, 86%, 64%);
+
+--colorVeryDarkBlue: hsl(234, 12%, 34%);
+--colorGrayishBlue: hsl(229, 6%, 66%);
+--colorVeryLightGray: hsl(0, 0%, 98%);
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap');
+
+/* Global */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: 15px;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: var(--colorVeryLightGray);
+}
+
+/* Utilities */
+.container {
+    max-width: 1100px;
+    margin: 0 auto;
+    overflow: auto;
+    padding: 0 40px;
+}
+
+.card {
+    width: 400px;
+    height: 250px;
+    background: #fff;
+    box-shadow: 1px 6px 13px 3px rgba(0,0,0,0.22);
+    -webkit-box-shadow: 1px 6px 13px 3px rgba(0,0,0,0.22);
+    -moz-box-shadow: 1px 6px 13px 3px rgba(0,0,0,0.22);
+    padding: 20px;
+    margin: 10px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+p,
+h1,
+h2,
+h3 {
+    margin: 1rem;
+}
+
+p {
+    color: var(--colorGrayishBlue);
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.border-top {
+    border-top: 5px solid black;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
+
+/* Header */
+.header {
+    margin: auto;
+}
+
+.header h2 {
+    font-size: 3rem;
+    font-weight: 200;
+    color: rgba(0,0,0,0.62);
+}
+
+.header h1 {
+    font-size: 3rem;
+    color: rgba(0,0,0,0.75)
+
+}
+
+.header p {
+    font-size: 20px;
+}
+
+/* Main */
+.main {
+    margin-top: 2rem;
+}
+
+.flex-column .supervisor {
+    border-color: var(--colorCyan);
+    align-items: end;
+}
+
+.flex-column .team-builder {
+    border-color: var(--colorRed);
+}
+
+.flex-column .karma {
+    border-color: var(--colorOrange);
+}
+
+.flex-column .calculator {
+    border-color: var(--colorBlue);
+    align-items: flex-start;
+}
+
